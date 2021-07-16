@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search List View Controller-->
+        <scene sceneID="dqq-pz-b1R">
+            <objects>
+                <viewController storyboardIdentifier="SearchListViewController" id="YZZ-5x-Am3" customClass="SearchListViewController" customModule="BookAppTeamWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9fL-Bw-4qz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Books, Authors, or ISBN" scopeBarBackgroundImage="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1Oo-n5-dxl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="BYN-VB-VRb"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="wbp-rg-27r">
+                                <rect key="frame" x="16" y="116" width="382" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28r-51-Ish">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="41"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.94117647059999998" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="   Latest   ">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuy-oM-Ift">
+                                        <rect key="frame" x="103.5" y="0.0" width="71.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Featured">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqc-E5-G27">
+                                        <rect key="frame" x="207" y="0.0" width="71.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Nearby">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJV-Gi-NjE">
+                                        <rect key="frame" x="310.5" y="0.0" width="71.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Popular">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="KoA-0C-DII"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jq7-Mq-bUb">
+                                <rect key="frame" x="0.0" y="157" width="414" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PXp-UB-i97"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PXp-UB-i97" firstAttribute="trailing" secondItem="Jq7-Mq-bUb" secondAttribute="trailing" id="06X-eq-UpQ"/>
+                            <constraint firstItem="1Oo-n5-dxl" firstAttribute="top" secondItem="PXp-UB-i97" secondAttribute="top" id="42g-bP-LRh"/>
+                            <constraint firstItem="1Oo-n5-dxl" firstAttribute="centerX" secondItem="9fL-Bw-4qz" secondAttribute="centerX" id="9fe-Ts-adw"/>
+                            <constraint firstItem="wbp-rg-27r" firstAttribute="leading" secondItem="PXp-UB-i97" secondAttribute="leading" constant="16" id="BdD-qH-V75"/>
+                            <constraint firstItem="Jq7-Mq-bUb" firstAttribute="leading" secondItem="PXp-UB-i97" secondAttribute="leading" id="XGB-bi-vdB"/>
+                            <constraint firstItem="PXp-UB-i97" firstAttribute="trailing" secondItem="wbp-rg-27r" secondAttribute="trailing" constant="16" id="YCc-OC-P0q"/>
+                            <constraint firstItem="1Oo-n5-dxl" firstAttribute="leading" secondItem="PXp-UB-i97" secondAttribute="leading" id="g0p-PN-XcV"/>
+                            <constraint firstItem="Jq7-Mq-bUb" firstAttribute="top" secondItem="wbp-rg-27r" secondAttribute="bottom" id="ldg-Q4-e47"/>
+                            <constraint firstItem="wbp-rg-27r" firstAttribute="top" secondItem="1Oo-n5-dxl" secondAttribute="bottom" constant="16" id="slE-8a-5jX"/>
+                            <constraint firstItem="PXp-UB-i97" firstAttribute="bottom" secondItem="Jq7-Mq-bUb" secondAttribute="bottom" id="ztL-4d-WIi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="zge-ay-K78"/>
+                    <connections>
+                        <outlet property="latestBtn" destination="28r-51-Ish" id="zqa-Or-Lr6"/>
+                        <outlet property="tableView" destination="Jq7-Mq-bUb" id="T6T-0F-cbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CcJ-vu-YT8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="279"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
